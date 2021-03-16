@@ -1,0 +1,5 @@
+package com.solid.pruebasolid.repositoy;
+
+public class PersonaRepository {
+
+}

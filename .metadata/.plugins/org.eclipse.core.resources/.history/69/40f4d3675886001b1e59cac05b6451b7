@@ -1,0 +1,36 @@
+package com.solid.pruebasolid.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.solid.pruebasolid.modelo.Persona;
+import com.solid.pruebasolid.repositoy.PersonaRepository;
+
+public class PersonaServiceImpl implements PersonaServiceDecl {
+
+	@Autowired
+	PersonaRepository personaRepository;
+
+	@Override
+	public List<Persona> getAllPersonas() {
+		return personaRepository.findAll();
+	}
+
+	@Override
+	public Persona findById(long id) {
+		return personaRepository.findById(id);
+	}
+
+	@Override
+	public Persona add(Persona persona) {
+		return personaRepository.save(persona);
+
+	}
+
+	@Override
+	public Persona edit(Persona persona) {
+		return personaRepository.save(persona);
+	}
+
+}
